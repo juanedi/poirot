@@ -48,7 +48,7 @@ application "poirot" do
   path app_dir
   repository "https://github.com/instedd/poirot.git"
   if node['poirot']['web']['revision']
-    shallow_clone true 
+    shallow_clone false
     revision node['poirot']['web']['revision']
   end
   migrate true
